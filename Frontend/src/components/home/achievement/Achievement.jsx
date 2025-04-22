@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import "./Achievement.css"; // Custom CSS file
 import image1 from '../../../assets/media/treePlanted.png'
-import image2 from '../../../assets/media/Contributors.png'
+import image2 from '../../../assets/media/contributors.png'
 import image3 from '../../../assets/media/events.png'
 import image4 from '../../../assets/media/cityReached.png'
 
