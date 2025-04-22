@@ -21,7 +21,6 @@ function Footer() {
               <li><a href="/sponser">Plant a Tree</a></li>
               <li><a href="/contribute">Sponser a Tree</a></li>
               <li><a href="/login">Login/Register</a></li>
-              <li><a href="/login">Login/Register</a></li>
             </ul>
           </Col>
 

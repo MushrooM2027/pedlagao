@@ -6,6 +6,7 @@ import anjali from '../../assets/media/anjali.jpg'
 import aditya from '../../assets/media/aditya.png'
 import utsaw from '../../assets/media/utsaw.png'
 import rajan from '../../assets/media/rajan.png'
+import suhani from '../../assets/media/suhani.png'
 
 const teamMembers = [
   {
@@ -22,7 +23,7 @@ const teamMembers = [
   },
   {
     name: "Suhani Singh",
-    img: (image2),
+    img: suhani,
   },
   {
     name: "Utsaw Kumar",

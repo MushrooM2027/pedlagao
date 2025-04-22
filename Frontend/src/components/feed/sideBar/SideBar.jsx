@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./Sidebar.css";
+import "./SideBar.css";
 import { useAuth } from "../../../context/AuthContext"; // if storing user data in context
 import axios from "axios"; // Import axios for fetching user data
 import profile from '../../../assets/media/profile.jpg'
