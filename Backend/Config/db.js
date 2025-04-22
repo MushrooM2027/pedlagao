@@ -1,3 +1,5 @@
+require('dotenv').config(); // <-- load .env file
+
 const { Sequelize } = require('sequelize');
 const dbPassword = process.env.DB_PASSWORD;
 const sequelize = new Sequelize('pedlagao', 'root', dbPassword, {
