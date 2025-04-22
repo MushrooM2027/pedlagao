@@ -1,0 +1,39 @@
+/* RisePage.css */
+.rise-body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background: url('../../assets/media/therise1.png') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .content {
+    background-color: rgba(28, 49, 26, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 900px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .content h1 {
+    font-size: 4em;
+    margin-bottom: 10px;
+  }
+  
+  .content h3 {
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+  
+  .content p {
+    font-size: 1.3em;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 20px;
+  }

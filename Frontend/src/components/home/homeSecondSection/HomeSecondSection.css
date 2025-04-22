@@ -1,0 +1,80 @@
+.homeSecondSection {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: white;
+  padding: 60px 20px;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Text Container with 3D Glass Look */
+.home_quote2 {
+  padding: 30px;
+  border-radius: 15px;
+  color: #103311;
+}
+
+.home_quote2 h2 {
+  font-weight: bold;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+}
+
+.home_quote2 p {
+  margin-top: 20px;
+  line-height: 1.6;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* 3D Styled Button */
+.home_quote2 .btn1 {
+  background: linear-gradient(145deg, #46e44c, #2ea73e);
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 6px 6px 15px #2e592f, -6px -6px 15px #65ff65;
+  transition: all 0.3s ease;
+}
+
+.home_quote2 .btn1:hover {
+  background: linear-gradient(145deg, #2ea73e, #46e44c);
+  transform: scale(1.05);
+  box-shadow: 2px 2px 8px #2e592f, -2px -2px 8px #65ff65;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .home_quote2 h2 {
+    font-size: 2rem;
+  }
+
+  .home_quote2 p {
+    font-size: 1rem;
+  }
+
+  .home_quote2 {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home_quote2 h2 {
+    font-size: 1.6rem;
+  }
+
+  .home_quote2 p {
+    font-size: 0.95rem;
+  }
+
+  .home_quote2 .btn1 {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,167 @@
+/* .post-page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  min-height: 100vh;
+  background-color: #1a5418;
+  perspective: 1200px;
+  flex-wrap: wrap;
+} */
+
+.post-card {
+  width: 100%;
+  /* max-width: 600px; */
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+  transform: rotateX(2deg) rotateY(1deg);
+}
+
+.post-card:hover {
+  transform: rotateX(0deg) rotateY(0deg) scale(1.02);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.profile-pic {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  margin-right: 1rem;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+.user-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.user-info p {
+  margin: 0;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.post-input {
+  width: 100%;
+  border: none;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  resize: none;
+  min-height: 100px;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  background: #e1f1e1;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.post-footer2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.4rem;
+  color: #888;
+  flex-wrap: nowrap;
+}
+
+.icons label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icons svg:hover {
+  color: #4dae4e;
+  transform: scale(1.1);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.post-button {
+  background: #ccc;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 25px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s;
+}
+
+.post-button:hover {
+  color: #f5fbf4;
+  background: #31922d;
+  transform: scale(1.1);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .post-card {
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  .post-input {
+    font-size: 1rem;
+  }
+
+  .post-button {
+    padding: 6px 16px;
+    font-size: 0.9rem;
+  }
+
+  .icons {
+    font-size: 1.2rem;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .post-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .post-footer2 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .post-button {
+    align-self: flex-end;
+  }
+}
+
+.media-preview img {
+  max-width: 100%;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.emoji-picker {
+  position: absolute;
+  z-index: 100;
+  margin-top: 10px;
+}

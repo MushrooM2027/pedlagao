@@ -1,0 +1,75 @@
+.form {
+    max-width: 500px;
+    background: linear-gradient(145deg, #1c9520, #103311);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 0px 15px #c5c5c5, 0px 0px 15px #ffffff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-page {
+    background: url('../../../assets/media/loginBg.svg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: brightness(0.9);
+    /* optional dim effect */
+    padding: 20px;
+}
+
+
+.login-form a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.register-link {
+    color: #c7ffcd;
+    text-align: center;
+}
+
+.forgot-password {
+    color: #c7ffcd;
+    text-align: left;
+}
+
+.form input {
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: none;
+    background: #c7ffcd;
+    box-shadow: inset 4px 4px 8px #b8ffc0, inset -4px -4px 8px #4db559;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.form input:focus {
+    outline: none;
+    background: #ffffff;
+    box-shadow: inset 2px 2px 5px #d1d1d1, inset -2px -2px 5px #ffffff;
+}
+
+.form button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #2ea73e, #46e44c);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form button:hover {
+    background: linear-gradient(145deg, #46e44c, #2ea73e);
+    box-shadow: 2px 2px 6px #3e8e41, -2px -2px 6px #5dd25a;
+    transform: translateY(-2px);
+}

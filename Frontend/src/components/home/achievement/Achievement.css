@@ -1,0 +1,86 @@
+.achievements-section {
+  background: url('../../../assets/media/achievementbg.png') no-repeat center center;
+  background-size: cover;
+  padding: 60px 0;
+  perspective: 1000px;
+  /* Add depth to child elements */
+  position: relative;
+  z-index: 1;
+}
+
+.achievements-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  /* Overlay for contrast */
+  backdrop-filter: blur(2px);
+  z-index: -1;
+}
+
+/* 3D card style */
+.achievement-card {
+  background-color: rgba(255, 255, 255, 0.85);
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.achievement-card:hover {
+  transform: rotateY(10deg) scale(1.05);
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.45);
+}
+
+/* Image with perspective */
+.image-container {
+  perspective: 800px;
+}
+
+.card-image {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  transform: rotateX(15deg) rotateY(15deg);
+  transition: transform 0.4s ease;
+}
+
+.achievement-card:hover .card-image {
+  transform: rotateX(0deg) rotateY(0deg) scale(1.1);
+}
+
+/* 3D Text styling */
+.count {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #1e272e;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  transform: translateZ(20px);
+}
+
+.text1 {
+  font-size: 1.1rem;
+  color: #34495e;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  transform: translateZ(10px);
+  text-align: center;
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+  .achievement-card {
+    margin: 0 auto;
+  }
+
+  .card-image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .count {
+    font-size: 1.8rem;
+  }
+}

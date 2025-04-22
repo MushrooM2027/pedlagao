@@ -1,0 +1,11 @@
+body {
+  background-color: #f0fdf4;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-layout {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  gap: 20px;
+}

@@ -1,0 +1,53 @@
+.user-insights-container {
+    background: #f0fdf4;
+    padding: 2rem 1rem;
+    border-radius: 12px;
+    margin-bottom: 50px;
+}
+
+.user-insights-title {
+    font-weight: 700;
+    color: #1a4d2e;
+    margin-bottom: 2rem;
+    font-size: 1.75rem;
+}
+
+.card {
+    max-width: 90%;
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 0.5rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 180px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #14532d;
+    margin-bottom: 0.25rem;
+}
+
+.card-subtitle {
+    font-size: 0.8rem;
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #374151;
+    line-height: 1.4;
+}

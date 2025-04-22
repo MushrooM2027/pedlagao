@@ -1,0 +1,115 @@
+.about-section {
+    background: linear-gradient(135deg, #f1f8e9, #ffffff);
+    min-height: 100vh;
+    padding: 60px 0;
+    perspective: 1000px;
+    overflow-x: hidden;
+  }
+  
+  .about-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #2e7d32;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+    transform: translateZ(40px);
+  }
+  
+  .about-subtitle {
+    font-size: 1.8rem;
+    color: #388e3c;
+    margin-top: 10px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    transform: translateZ(30px);
+  }
+  
+  .about-description {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #4e342e;
+    text-align: justify;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    transform: translateZ(20px);
+  }
+  
+  .team-heading {
+    font-size: 2.2rem;
+    color: #1b5e20;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transform: translateZ(25px);
+  }
+  
+  /* Team Cards */
+  
+  .team-row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 20px;
+  }
+  
+  .team-card-col {
+    flex: 0 0 auto;
+    max-width: 100px;
+    margin: 0 15px;
+  }
+  
+  .team-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    border: none;
+    height: 300px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+  }
+  
+  .team-card:hover {
+    transform: scale(1.05) rotateY(5deg);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.35);
+  }
+  
+   .team-image {
+    width: 150px !important;
+    height: 150px !important;
+    object-fit: cover;
+    border-radius: 50% !important;
+    margin: 0 auto 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    transform: translateZ(10px);
+  }
+  
+  .team-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2e7d32;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .team-role {
+    font-size: 1rem;
+    color: #5d4037;
+    transform: translateZ(5px);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .about-title {
+      font-size: 2.2rem;
+    }
+  
+    .about-subtitle {
+      font-size: 1.4rem;
+    }
+  
+    .about-description {
+      font-size: 1rem;
+    }
+  
+    .team-heading {
+      font-size: 1.8rem;
+    }
+  }

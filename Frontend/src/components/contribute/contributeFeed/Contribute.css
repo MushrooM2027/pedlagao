@@ -1,0 +1,64 @@
+.feed-container {
+  width: 100%;
+  align-items: center;
+  padding-left: 100px;
+}
+
+.fixed-filter-buttons {
+  position: fixed;
+  left: 70px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* div.main-layout{
+  margin-left: 33%;
+} */
+
+.center-login-message {
+  min-height: calc(100vh - 100px); /* Adjust based on any header/footer height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.fixed-filter-buttons .btn-side {
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  gap: 10px;
+  transition: background-color 0.3s ease;
+}
+
+
+.filter-btn {
+  background-color: rgb(51, 153, 95);
+  width: 150px;
+  font-weight: bold;
+  border-radius: 12px;
+  border: none; 
+  transition: color 1s ease ,background-color 0s ease;
+}
+
+
+.btn-primary {
+  background-color: #103311 !important;
+  border: none !important;
+  color: white !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: rgb(184, 197, 177) !important;
+  color: azure !important;
+  box-shadow: none !important;
+}

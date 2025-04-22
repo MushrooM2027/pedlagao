@@ -1,0 +1,103 @@
+.home-section-roar {
+  background: url('../../../assets/media/roarBg.svg') no-repeat center center;
+  background-size: cover;
+  padding: 60px 0;
+  perspective: 1000px; /* Add depth to child elements */
+  position: relative;
+  z-index: 1;
+  }
+  
+  
+  .home-image-container {
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+  }
+  
+  .home-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    transform: rotateY(10deg) scale(1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .home-image:hover {
+    transform: rotateY(0deg) scale(1.05);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
+  }
+  
+  .home-text-container {
+    padding: 40px;
+    transform: rotateY(5deg);
+  }
+  
+  .home-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #004d40;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    transform: translateZ(30px);
+  }
+  
+  .home-subtitle {
+    font-size: 1.8rem;
+    color: #00695c;
+    margin-top: 10px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    transform: translateZ(20px);
+  }
+  
+  .home-description {
+    margin: 20px 0;
+    font-size: 1.1rem;
+    color: #37474f;
+    max-width: 500px;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    transform: translateZ(10px);
+  }
+  
+  .home-overlay .home-button {
+    background: linear-gradient(145deg, #46e44c, #2ea73e);
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 6px 6px 15px #2e592f, -6px -6px 15px #65ff65;
+    transition: all 0.3s ease;
+  }
+  
+  .home-overlay .home-button:hover {
+    background: linear-gradient(145deg, #2ea73e, #46e44c);
+    transform: scale(1.05);
+    box-shadow: 2px 2px 8px #2e592f, -2px -2px 8px #65ff65;
+  }
+  
+  @media (max-width: 768px) {
+    .home-text-container {
+      transform: none;
+      text-align: center;
+    }
+  
+    .home-image {
+      transform: none;
+    }
+  
+    .home-title {
+      font-size: 2.2rem;
+    }
+  
+    .home-subtitle {
+      font-size: 1.5rem;
+    }
+  
+    .home-description {
+      font-size: 1rem;
+    }
+  }

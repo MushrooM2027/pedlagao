@@ -1,0 +1,87 @@
+.navbar {
+  background-color: #103311;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+}
+
+.logo {
+  width: 15%;
+  height: 15%;
+}
+
+div.container {
+  padding: 0;
+  max-width: 100%;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.navbar.navbar.navbar-expand-lg.navbar-light {
+  align-items: center;
+  display: flex;
+}
+
+.merge {
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.profile-dropdown {
+  
+  position: relative;
+  
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1000;
+}
+
+.navbar-nav .nav-link {
+  margin-left: 0.5rem;
+  color: white !important;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.navbar-toggler,
+.navbar-toggler-icon {
+  background-color: #fff !important;
+  border: none;
+  color: white !important;
+}
+
+.coin-box {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 5px 10px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.15);
+  transition: transform 0.3s ease;
+  transform-style: preserve-3d;
+  cursor: default;
+}
+
+.coin-box:hover {
+  transform: scale(1.05) rotateY(5deg);
+}
+
+.coin-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 6px;
+}
+
+.coin-text {
+  font-weight: bold;
+  color: white;
+  font-size: 1rem;
+}

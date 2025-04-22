@@ -1,0 +1,90 @@
+/* Global form styles */
+.form {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 30px;
+    color: white; /* Default text color */
+  }
+  
+  .register-container {
+    margin: 50px 50px;
+    padding: 0 15px;
+  }
+  
+  /* Form card styling */
+  .register-form {
+    background: #005f00;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px #c1d1c1, -10px -10px 20px #ffffff;
+    transition: all 0.3s ease;
+    color: white; /* All text inside form is white */
+  }
+  
+  /* Title */
+  .form-title {
+    color: white;
+    text-shadow: 1px 1px 2px #a8cfa8;
+  }
+  
+  /* Label */
+  .mb-3 label {
+    color: white !important;
+    font-weight: 600;
+  }
+  
+  /* Inputs */
+  .custom-input {
+    background: #a1ffa1;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 15px;
+    font-size: 14px;
+    color: #2f4f2f;
+    box-shadow: inset 4px 4px 8px #c6dec6, inset -4px -4px 8px #ffffff;
+    transition: all 0.3s ease;
+  }
+  
+  .custom-input:focus {
+    background: #ffffff;
+    color: #2f4f2f;
+    outline: none;
+    box-shadow: inset 2px 2px 6px #9ecf9e, inset -2px -2px 6px #ffffff;
+  }
+  
+  /* Button */
+  .custom-btn {
+    background: linear-gradient(145deg, #006f00, #07ad07);
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+  }
+  
+  .custom-btn:hover {
+    background: #eaffea;
+    transform: translateY(-2px);
+    color: #2f4f2f;
+    box-shadow: 3px 3px 8px #88b888, -3px -3px 8px #ffffff;
+  }
+  
+  /* Links */
+  .form a,
+  .login-link a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+  }
+  
+  .login-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Additional text elements */
+  .register-link,
+  .forgot-password,
+  .login-link,
+  .text-center,
+  .mt-3 {
+    color: white;
+  }
