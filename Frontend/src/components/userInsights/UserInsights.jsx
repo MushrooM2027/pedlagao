@@ -32,7 +32,7 @@ const UserInsights = () => {
                             <Card.Body>
                                 <Card.Text>"{user.feedback}"</Card.Text>
                             </Card.Body>
-                            <div class="horizontal-line"></div>
+                            <div className="horizontal-line"></div>
                             <div className='card-footer1'>
                                 <img className='card-img1' src={user.image} alt={user.name} />
                                 <strong className='card-name'> {user.name}</strong>
