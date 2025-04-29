@@ -1,13 +1,28 @@
-.user-insights-container {
+/* .user-insights-container {
     background: #f0fdf4;
     padding: 2rem 1rem;
-    border-radius: 12px;
+    
+    margin: 1px;
+    width: 100%;
+    background-color: red;
+} */
+.user-insights-container.container {
+    margin: 0;
+    width: 100%;
     margin-bottom: 50px;
+    padding-left: 40px;
+}
+
+.row.row2 {
+    /* background-color: red; */
+    width: 100%;
+    margin-left: 0;
 }
 
 .user-insights-title {
+    width: 100%;
     font-weight: 700;
-    color: #1a4d2e;
+    color: #0e4925;
     margin-bottom: 2rem;
     font-size: 1.75rem;
 }
@@ -18,6 +33,7 @@
     border-radius: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     padding: 0.5rem;
+    background-color: #0e4925 !important;
 }
 
 .card:hover {
@@ -25,18 +41,46 @@
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
-.card-img-top {
+.card-img1 {
+    width: 50px;
+    /* adjust as needed */
+    height: 50px;
+    /* make it a square */
     object-fit: cover;
-    height: 180px;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
+    /* crop the image without stretching */
+    border-radius: 50%;
+    /* makes it a circle */
+    overflow: hidden;
 }
 
-.card-title {
+.card-name {
+    color: #2cff60;
+}
+
+.card-footer1 {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-top: 0;
+    padding-bottom: 20px;
+}
+
+.horizontal-line {
+    width: 100%;
+    /* or set a fixed width */
+    height: 2px;
+    background-color: rgb(14, 156, 21);
+    margin: 20px 0;
+}
+
+
+.card-title1.card-title.h5 {
     font-size: 1rem;
     font-weight: 600;
-    color: #14532d;
+    color: #2cff60 !important;
     margin-bottom: 0.25rem;
+    /* background-color: red; */
 }
 
 .card-subtitle {

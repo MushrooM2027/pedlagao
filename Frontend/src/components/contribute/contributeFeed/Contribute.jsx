@@ -94,34 +94,46 @@ const ContributeFeed = () => {
       </Modal>
 
       <div className="feed-container">
-        {feedData.map((post) => (
-          <FeedItem
-            key={post.RequestId}
-            name={post.user?.Name || "Anonymous"}
-            profileImage={
-              post.user?.profileMedia?.filePath
-                ? `http://localhost:3000/uploads/${post.user.profileMedia.filePath}`
-                : profile
-            }
-            image={
-              post.plantationMedia?.[0]?.filePath
-                ? `http://localhost:3000/uploads/${post.plantationMedia[0].filePath}`
-                : null
-            }
-            time={new Date(post.createdAt).toLocaleString()}
-            message={post.Description}
-            plantType={post.TreeType}
-            sponsorcoins={post.Amount}
-            locationselection={post.RequestedLocation}
-            requestId={post.RequestId}
-            isActive={post.IsActive}
-            claimedBy={post.ClaimedBy}
-            currentUserId={user.UserId}
-            onStatusChange={fetchRequests}
-            onSubmitClick={openPostModal} // 🔥 Pass modal open handler
-          />
-        ))}
+        {feedData.length === 0 ? (
+          <div className="no-data-message">
+            <h4>No requests to show.</h4>
+            <p>
+              {filter === 'active'
+                ? 'There are currently no active plantation requests.'
+                : 'You haven’t claimed any requests yet.'}
+            </p>
+          </div>
+        ) : (
+          feedData.map((post) => (
+            <FeedItem
+              key={post.RequestId}
+              name={post.user?.Name || "Anonymous"}
+              profileImage={
+                post.user?.profileMedia?.filePath
+                  ? `http://localhost:3000/uploads/${post.user.profileMedia.filePath}`
+                  : profile
+              }
+              image={
+                post.plantationMedia?.[0]?.filePath
+                  ? `http://localhost:3000/uploads/${post.plantationMedia[0].filePath}`
+                  : null
+              }
+              time={new Date(post.createdAt).toLocaleString()}
+              message={post.Description}
+              plantType={post.TreeType}
+              sponsorcoins={post.Amount}
+              locationselection={post.RequestedLocation}
+              requestId={post.RequestId}
+              isActive={post.IsActive}
+              claimedBy={post.ClaimedBy}
+              currentUserId={user.UserId}
+              onStatusChange={fetchRequests}
+              onSubmitClick={openPostModal}
+            />
+          ))
+        )}
       </div>
+
     </>
   );
 };

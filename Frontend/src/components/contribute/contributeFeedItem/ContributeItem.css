@@ -1,69 +1,69 @@
-  .post {
-    background-color: #edffeb;
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
-  }
+.post {
+  background-color: #edffeb;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+}
 
-  .post:hover {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    transform: scale(1.02);
-    transition: all 0.3s ease;
-  }
+.post:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
 
-  .post-header {
-    display: flex;
-    align-items: center;
-  }
+.post-header {
+  display: flex;
+  align-items: center;
+}
 
-  .profile-img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 15px;
-  }
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
 
-  .feed-info {
-    margin-left: 120px;
-  }
+.feed-info {
+  margin-left: 120px;
+}
 
-  .post-body img {
-    width: 100%;
-    border-radius: 10px;
-    margin-top: 15px;
-  }
+.post-body img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 15px;
+}
 
-  .post-footer {
-    margin-top: 15px;
-    display: flex;
-    justify-content: end;
-  }
+.post-footer {
+  margin-top: 15px;
+  display: flex;
+  justify-content: end;
+}
 
-  .btn1 {
-    background: linear-gradient(145deg, #46e44c, #2ea73e);
-    color: #ffffff;
-    font-weight: bold;
-    border: none;
-    padding: 12px 28px;
-    border-radius: 12px;
-    margin-top: 20px;
-    transition: all 0.3s ease;
-  }
+.btn1 {
+  background: linear-gradient(145deg, #46e44c, #2ea73e);
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 12px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
 
-  .btn1:hover {
-    background: linear-gradient(145deg, #2ea73e, #46e44c);
-    transform: scale(1.05);
-  }
+.btn1:hover {
+  background: linear-gradient(145deg, #2ea73e, #46e44c);
+  transform: scale(1.05);
+}
 
-  .feed-img-container {
-    margin: 10px 0;
-    text-align: center;
-  }
+.feed-img-container {
+  margin: 10px 0;
+  text-align: center;
+}
 
-  .feed-img {
-    max-width: 80%;
-    max-height: 80%;
-    border-radius: 10px;
-    object-fit: cover;
-  }
+.feed-img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+  object-fit: cover;
+}

@@ -1,11 +1,28 @@
 .achievements-section {
-  background: url('../../../assets/media/achievementbg.png') no-repeat center center;
+  background: url('../../../assets/media/achievementBg.svg') no-repeat center center;
   background-size: cover;
+  max-width: 100%;
   padding: 60px 0;
   perspective: 1000px;
   /* Add depth to child elements */
   position: relative;
   z-index: 1;
+  margin: 0;
+}
+
+h1.section-title1 {
+  margin: 0;
+  max-width: 99%;
+}
+
+.row1 {
+  width: 100%;
+}
+
+.container.container2 {
+  margin-left: 0px;
+  max-width: 100%;
+  padding-left: 60px;
 }
 
 .achievements-section::before {
@@ -19,10 +36,28 @@
 }
 
 /* 3D card style */
-.achievement-card {
-  background-color: rgba(255, 255, 255, 0.85);
+/* .achievement-card {
+  background: url('../../../assets/media/achieveCard.svg') no-repeat center center;
+  background-size: cover;
   border: none;
   border-radius: 20px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  overflow: hidden;
+} */
+
+.image-background .achievement-card {
+  background-image: url('../../../assets/media/achieveCard.svg');
+  /* Update with your actual image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  /* Optional: remove card border for a cleaner look */
+  color: white;
+  /* Optional: adjust text color for contrast */
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
   transform-style: preserve-3d;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -53,17 +88,27 @@
 }
 
 /* 3D Text styling */
-.count {
-  font-size: 2.2rem;
+
+.section-title1 {
+  font-size: 2.8rem;
   font-weight: bold;
-  color: #1e272e;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  color: #dfffdd;
+  margin-bottom: 3rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  transform: perspective(500px) rotateX(3deg);
+}
+
+.count1 {
+  font-size: 1.5rem !important;
+  font-weight: bold !important;
+  color: #1e272e !important;
+  /* text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); */
   transform: translateZ(20px);
 }
 
 .text1 {
   font-size: 1.1rem;
-  color: #34495e;
+  color: #ffffff !important;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   transform: translateZ(10px);
   text-align: center;

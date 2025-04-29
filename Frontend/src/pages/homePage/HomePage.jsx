@@ -5,17 +5,21 @@ import HomeRise from '../../components/home/homeRise/HomeRise'
 import HomeRule from '../../components/home/homeRuin/HomeRuin'
 import HomeRoar from '../../components/home/homeRoar/HomeRoar'
 import UserInsights from '../../components/userInsights/UserInsights';
+import HomeVisionMission from '../../components/home/homeVisionMission/HomeVisionMission'
 
 const HomePage = () => {
   return (
     <>
-      <HomeTopSection/>
-      <HomeSecondSection/>
-      <HomeRise/>
-      <HomeRule/>
-      <HomeRoar/>
-      <AchievementsSection/>
-      <UserInsights/>
+      <div className='home-page'>
+        <HomeTopSection />
+        <HomeSecondSection />
+        <HomeRise />
+        <HomeRule />
+        <HomeRoar />
+        <HomeVisionMission />
+        <AchievementsSection />
+        <UserInsights />
+      </div>
     </>
   );
 };

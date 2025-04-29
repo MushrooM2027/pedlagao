@@ -18,7 +18,8 @@
 } */
 
 .center-login-message {
-  min-height: calc(100vh - 100px); /* Adjust based on any header/footer height */
+  min-height: calc(100vh - 100px);
+  /* Adjust based on any header/footer height */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,8 +45,8 @@
   width: 150px;
   font-weight: bold;
   border-radius: 12px;
-  border: none; 
-  transition: color 1s ease ,background-color 0s ease;
+  border: none;
+  transition: color 1s ease, background-color 0s ease;
 }
 
 
@@ -61,4 +62,10 @@
   background-color: rgb(184, 197, 177) !important;
   color: azure !important;
   box-shadow: none !important;
+}
+
+.no-data-message {
+  text-align: center;
+  margin-top: 50px;
+  color: #555;
 }

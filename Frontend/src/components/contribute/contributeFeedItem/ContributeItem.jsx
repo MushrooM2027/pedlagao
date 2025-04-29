@@ -62,19 +62,19 @@ const FeedItem = ({
       </div>
 
       <div className="post-body">
-      
-      <p>{message}</p>
-      
-      <div className='feed-info'>Plant Type: {plantType}</div>
-      <div className='feed-info'>Sponsor Coins: {sponsorcoins}</div>
-      <div className='feed-info'>Location: {locationselection}</div>
-      {image && (
-        <div className="feed-img-container">
-          <img src={image} alt="Plantation Request" className="feed-img" />
+
+        <p>{message}</p>
+
+        <div className='feed-info'>Plant Type: {plantType}</div>
+        <div className='feed-info'>Sponsor Coins: {sponsorcoins}</div>
+        <div className='feed-info'>Location: {locationselection}</div>
+        {image && (
+          <div className="feed-img-container">
+            <img src={image} alt="Plantation Request" className="feed-img" />
           </div>
-      )}
+        )}
       </div>
-      
+
 
       <div className="post-footer">
         <div className="reaction-btns">
