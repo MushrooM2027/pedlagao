@@ -1,7 +1,7 @@
 import './App.css'
 import HomePage from '../src/pages/homePage/HomePage';
 import LoginPage from './pages/loginPage/LoginPage'
-import RegistrationPage from '../src/pages/registrationPage/RegistrationPage'
+import RegistrationPage from './pages/registrationPage/RegistrationPage'
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/header/Header';
 import SponserPage from './pages/sponsershipPage/SponsershipPage'
