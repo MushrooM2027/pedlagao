@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Nav } from 'react-bootstrap';
 import FormInput from "../../inputField/InputField";
-import { useNavigate } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import './LoginForm.css'
 import { useAuth } from "../../../context/AuthContext";
-import { Container,Row,Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
 const LoginForm = () => {
   const { login } = useAuth();
@@ -73,7 +74,7 @@ const LoginForm = () => {
                 {message && (
                   <p style={{ color: isSuccess ? 'green' : 'red' }}>{message}</p>
                 )}
-                <p className="register-link">Don't have an account? <a href="/register">Register</a></p>
+                <p className="register-link">Don't have an account?<Nav.Link as={Link} to="/register">Register</Nav.Link></p>
               </form>
             </div>
           </Col>
