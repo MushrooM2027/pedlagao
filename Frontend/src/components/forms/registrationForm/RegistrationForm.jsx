@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import { useAuth } from "../../../context/AuthContext";
 import './RegistrationForm.css';
+import API_URL from '../../../config/api';
 
 const RegistrationForm = () => {
   const { login } = useAuth();
@@ -44,7 +45,7 @@ const RegistrationForm = () => {
         formData.append('profilePicture', form.profilePicture);
       }
 
-      const res = await axios.post('http://localhost:3000/api/users/register', formData, {
+      const res = await axios.post(`${API_URL}/api/users/register`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
 

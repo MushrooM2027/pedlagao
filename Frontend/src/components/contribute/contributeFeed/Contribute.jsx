@@ -7,7 +7,7 @@ import { useAuth } from "../../../context/AuthContext";
 import { Modal } from "react-bootstrap";
 import { Button, ButtonGroup } from "react-bootstrap";
 import profile from '../../../assets/media/profile.jpg'
-
+import API_URL from '../../../config/api';
 
 const ContributeFeed = () => {
   const { isLoggedIn, user } = useAuth();
@@ -42,7 +42,7 @@ const ContributeFeed = () => {
 
   const fetchRequests = useCallback(async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/plant/plantationRequest");
+      const response = await axios.get(`${API_URL}/api/plant/plantationRequest`);
       let filtered = response.data;
       if (filter === 'active') {
         filtered = filtered.filter(r => r.IsActive);
