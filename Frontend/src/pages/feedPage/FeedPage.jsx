@@ -4,7 +4,7 @@ import Feed from "../../components/feed/feed/Feed";
 import { Modal, Button } from "react-bootstrap";
 import FloatingPostButton from '../../components/floatingPostButton/FloatingPostButton';
 import "./FeedPage.css";
-import CreatePost from "../PostPage/PostPage"; 
+import CreatePost from "../PostPage/PostPage";
 import { useAuth } from "../../context/AuthContext";
 
 
@@ -17,8 +17,8 @@ const FeedPage = () => {
   if (!isLoggedIn) {
     return (
       <div className="login-prompt">
-        <h3 style={{textAlign:"center"}}>You need to be logged in to view this page.</h3>
-        <p style={{textAlign:"center"}}>Please log in to Sponser a tree.</p>
+        <h3 style={{ textAlign: "center" }}>You need to be logged in to view this page.</h3>
+        <p style={{ textAlign: "center" }}>Please log in to Sponser a tree.</p>
       </div>
     );
   }
@@ -26,17 +26,11 @@ const FeedPage = () => {
   return (
     <div>
       <FloatingPostButton onClick={handleOpenModal}>Click here to post</FloatingPostButton>
-
-      {/* Post Creation Modal */}
       <Modal show={showPostModal} onHide={handleCloseModal} centered backdrop="static" size="lg">
-        {/* <Modal.Header closeButton>
-          <Modal.Title>Create a Post</Modal.Title>
-        </Modal.Header> */}
         <Modal.Body>
           <CreatePost onClose={handleCloseModal} />
         </Modal.Body>
       </Modal>
-
       <div className="main-layout">
         <Sidebar />
         <Feed />

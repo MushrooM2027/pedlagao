@@ -3,7 +3,8 @@ import "./FeedItem.css";
 import logo from '../../../assets/media/logo.png';
 import axios from "axios";
 import { useAuth } from "../../../context/AuthContext";
-import profile from '../../../assets/media/profile.jpg'
+import profile from '../../../assets/media/profile.jpg';
+import API_URL from '../../../config/api';
 
 const FeedItem = ({ name, time, message, images, profilePic, postId }) => {
     const { user } = useAuth();
@@ -15,7 +16,7 @@ const FeedItem = ({ name, time, message, images, profilePic, postId }) => {
     useEffect(() => {
         const checkIfLiked = async () => {
             try {
-                const res = await axios.get(`http://localhost:3000/api/likes/check`, {
+                const res = await axios.get(`${API_URL}/api/likes/check`, {
                     params: { UserId: user.UserId, PostId: postId }
                 });
                 setLiked(res.data.liked);
@@ -32,13 +33,13 @@ const FeedItem = ({ name, time, message, images, profilePic, postId }) => {
     const handleLike = async () => {
         try {
             if (!liked) {
-                await axios.post("http://localhost:3000/api/likes", {
+                await axios.post(`${API_URL}/api/likes`, {
                     UserId: user.UserId,
                     PostId: postId,
                 });
                 setLiked(true);
             } else {
-                await axios.delete("http://localhost:3000/api/likes", {
+                await axios.delete(`${API_URL}/api/likes`, {
                     data: { UserId: user.UserId, PostId: postId },
                 });
                 setLiked(false);
@@ -61,7 +62,7 @@ const FeedItem = ({ name, time, message, images, profilePic, postId }) => {
 
     const handleFetchComments = async () => {
         try {
-            const res = await axios.get(`http://localhost:3000/api/comment/comments/${postId}`);
+            const res = await axios.get(`${API_URL}/api/comment/comments/${postId}`);
             setComments(res.data);
         } catch (err) {
             console.error("Error fetching comments:", err);
@@ -73,7 +74,7 @@ const FeedItem = ({ name, time, message, images, profilePic, postId }) => {
         if (!newComment.trim()) return;
 
         try {
-            const res = await axios.post("http://localhost:3000/api/comment/comments", {
+            const res = await axios.post(`${API_URL}/api/comment/comments`, {
                 PostId: postId,
                 UserId: user.UserId,
                 Content: newComment,
