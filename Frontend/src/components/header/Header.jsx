@@ -7,7 +7,7 @@ import ProfileImg from '../../assets/media/profile.jpg';
 import coinImg from '../../assets/media/coin.png';
 import './Header.css';
 import axios from 'axios';
-import API_URL from '../../../config/api';
+import API_URL from '../../config/api';
 
 const Header = () => {
     const { isLoggedIn, logout, user } = useAuth();
