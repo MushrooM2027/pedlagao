@@ -3,6 +3,7 @@ import FormInput from '../../inputField/InputField';
 import './SponsershipPlantForm.css';
 import axios from 'axios';
 import { useAuth } from "../../../context/AuthContext";
+import API_URL from '../../../config/api';
 
 const SponsorPlant = () => {
     const [successMessage, setSuccessMessage] = useState('');
@@ -57,7 +58,7 @@ form.append('Amount', formData.Amount);
                 Array.from(formData.LocationImage).forEach(file => form.append('LocationImage', file));
             }
 
-            const res = await axios.post('http://localhost:3000/api/plant/plantationRequest', form);
+            const res = await axios.post(`${API_URL}/api/plant/plantationRequest`, form);
             setSuccessMessage("Plantation request submitted successfully!");
             setFormData({
                 PlantingFor: '',

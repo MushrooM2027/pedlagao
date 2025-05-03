@@ -7,6 +7,7 @@ import ProfileImg from '../../assets/media/profile.jpg';
 import coinImg from '../../assets/media/coin.png';
 import './Header.css';
 import axios from 'axios';
+import API_URL from '../../../config/api';
 
 const Header = () => {
     const { isLoggedIn, logout, user } = useAuth();
@@ -20,7 +21,7 @@ const Header = () => {
     useEffect(() => {
         if (isLoggedIn && user?.UserId) {
             axios
-                .get(`http://localhost:3000/api/users/coinBalance/${user.UserId}`)
+                .get(`${API_URL}/api/users/coinBalance/${user.UserId}`)
                 .then((response) => {
                     setCoinBalance(response.data.coinBalance);
                 })

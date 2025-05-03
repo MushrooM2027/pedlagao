@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import "./SideBar.css";
 import { useAuth } from "../../../context/AuthContext"; // if storing user data in context
 import axios from "axios"; // Import axios for fetching user data
-import profile from '../../../assets/media/profile.jpg'
+import profile from '../../../assets/media/profile.jpg';
+import API_URL from '../../../config/api';
 
 const Sidebar = () => {
   const { user } = useAuth(); // optional
@@ -12,12 +13,9 @@ const Sidebar = () => {
     const fetchUserProfilePicture = async () => {
       try {
         // Make a GET request to fetch user profile data
-        const response = await axios.get(`http://localhost:3000/api/users/${user?.UserId}`);
+        const response = await axios.get(`${API_URL}/api/users/${user?.UserId}`);
         // Assuming the API returns the relative file path
         const profilePicPath = response.data.profilePicture;
-
-        // Prepend the `/uploads/` path manually
-        // const fullProfileImageUrl = profilePicPath ? `http://localhost:3000/uploads${profilePicPath.replace('http://localhost:3000', '')}` : null;
         setProfileImage(profilePicPath); // Set the profile picture state
       } catch (error) {
         console.error("Error fetching user profile picture:", error);

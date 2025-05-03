@@ -118,7 +118,7 @@ const FeedItem = ({ name, time, message, images, profilePic, postId }) => {
                                     <img
                                         src={
                                             comment.commenter?.profileMedia?.filePath
-                                                ? `http://localhost:3000/uploads/${comment.commenter.profileMedia.filePath}`
+                                                ? `${API_URL}/uploads/${comment.commenter.profileMedia.filePath}`
                                                 : profile
                                         }
                                         alt="Commenter"

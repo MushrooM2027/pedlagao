@@ -3,7 +3,8 @@ import FeedItem from "../feedItem/FeedItem";
 import "./Feed.css";
 import axios from "axios";
 import { useAuth } from "../../../context/AuthContext";
-import profile from '../../../assets/media/profile.jpg'
+import profile from '../../../assets/media/profile.jpg';
+import API_URL from '../../../config/api';
 
 const Feed = () => {
     const { user } = useAuth();
@@ -13,7 +14,7 @@ const Feed = () => {
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                const res = await axios.get("http://localhost:3000/api/post/feed");
+                const res = await axios.get(`${API_URL}/api/post/feed`);
                 setFeedData(res.data);
             } catch (err) {
                 console.error("Error fetching posts:", err);
@@ -33,12 +34,12 @@ const Feed = () => {
                     message={post.Description}
                     images={post.postMedia?.map(postMedia =>
                         postMedia.filePath
-                            ? `http://localhost:3000${postMedia.filePath}`
+                            ? `${API_URL}${postMedia.filePath}`
                             : "https://via.placeholder.com/150" // Fallback to placeholder image
                     )}// ✅ all post images
                     profilePic={
                         post.author?.profileMedia?.filePath
-                          ? `http://localhost:3000/uploads/${post.author.profileMedia.filePath}`
+                          ? `${API_URL}/uploads/${post.author.profileMedia.filePath}`
                           : profile
                       }
                     currentUserId={user?.UserId}

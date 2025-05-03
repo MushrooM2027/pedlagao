@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
-import { Form, Button, Container, Row, Col } from 'react-bootstrap';
+import { Link } from "react-router-dom";
+import { Nav,Form, Button, Container, Row, Col } from 'react-bootstrap';
 import { useAuth } from "../../../context/AuthContext";
 import './RegistrationForm.css';
 import API_URL from '../../../config/api';
@@ -114,7 +114,7 @@ const RegistrationForm = () => {
               <p className={`text-center mt-3 ${isSuccess ? 'text-success' : 'text-danger'}`}>{message}</p>
             )}
             <p className="login-link mt-3 text-center">
-              Already have an account? <a href="/login">Login</a>
+              Already have an account? <Nav.Link as={Link} to="/register">Register</Nav.Link>
             </p>
           </Form>
         </Col>

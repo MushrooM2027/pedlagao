@@ -1,6 +1,7 @@
 import './ContributeItem.css';
 import axios from 'axios';
 import { useState } from 'react';
+import API_URL from '../../../config/api';
 
 const FeedItem = ({
   name,
@@ -23,7 +24,7 @@ const FeedItem = ({
 
   const handleAccept = async () => {
     try {
-      await axios.post(`http://localhost:3000/api/plant/plantationRequest/${requestId}/accept`, {
+      await axios.post(`${API_URL}/api/plant/plantationRequest/${requestId}/accept`, {
         UserId: currentUserId,
       });
       setStatus(false);
@@ -36,7 +37,7 @@ const FeedItem = ({
 
   const handleCancel = async () => {
     try {
-      await axios.post(`http://localhost:3000/api/plant/plantationRequest/${requestId}/cancel`);
+      await axios.post(`${API_URL}api/plant/plantationRequest/${requestId}/cancel`);
       setStatus(true);
       setClaimer(null);
       onStatusChange?.(); // notify parent

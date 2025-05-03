@@ -18,7 +18,6 @@ const ContributeFeed = () => {
   if (!isLoggedIn) {
     return (
       <div style={{
-        // position: 'fixed',         // ignore layout flow
         top: 0,
         left: 0,
         width: '100vw',
@@ -27,8 +26,6 @@ const ContributeFeed = () => {
         justifyContent: 'center',
         alignItems: 'center',
         textAlign: 'center',
-        // backgroundColor: '#f8f9fa', // optional: light background
-        // zIndex: 9999               // on top of layout
       }}>
         <div>
           <h3>You need to be logged in to view this page.</h3>

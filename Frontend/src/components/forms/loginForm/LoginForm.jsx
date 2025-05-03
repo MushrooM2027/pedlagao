@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Nav } from 'react-bootstrap';
 import FormInput from "../../inputField/InputField";
 import { Link,useNavigate } from "react-router-dom";
 import './LoginForm.css'
 import { useAuth } from "../../../context/AuthContext";
-import { Container, Row, Col } from "react-bootstrap";
+import { Nav,Container, Row, Col } from "react-bootstrap";
+import API_URL from '../../../config/api';
 
 const LoginForm = () => {
   const { login } = useAuth();
@@ -26,7 +26,7 @@ const LoginForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:3000/api/users/login', form);
+      const res = await axios.post(`${API_URL}/api/users/login`, form);
       console.log('Login response:', res.data);
       setMessage("Login successful!");
       setIsSuccess(true);
@@ -39,7 +39,6 @@ const LoginForm = () => {
   };
   useEffect(() => {
     if (user) {
-      // login();
       navigate('/home')
     }
   }, [user, navigate])
