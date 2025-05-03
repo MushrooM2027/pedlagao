@@ -42,17 +42,17 @@ const SponsorPlant = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+        console.log('Form submitted');
         try {
             const form = new FormData();
             form.append('UserId', UserId);
-form.append('PlantingFor', formData.PlantingFor === 'Other' ? formData.otherRelation : formData.PlantingFor);
-form.append('NameOfRequestedPerson', formData.NameOfRequestedPerson);
-form.append('TreeType', formData.TreeType === 'Customize' ? formData.customTree : formData.TreeType);
-form.append('RequestedLocation', formData.RequestedLocation);
-form.append('Description', formData.Description);
-form.append('NumberOfTrees', formData.NumberOfTrees);
-form.append('Amount', formData.Amount);
+            form.append('PlantingFor', formData.PlantingFor === 'Other' ? formData.otherRelation : formData.PlantingFor);
+            form.append('NameOfRequestedPerson', formData.NameOfRequestedPerson);
+            form.append('TreeType', formData.TreeType === 'Customize' ? formData.customTree : formData.TreeType);
+            form.append('RequestedLocation', formData.RequestedLocation);
+            form.append('Description', formData.Description);
+            form.append('NumberOfTrees', formData.NumberOfTrees);
+            form.append('Amount', formData.Amount);
 
             if (formData.LocationImage) {
                 Array.from(formData.LocationImage).forEach(file => form.append('LocationImage', file));

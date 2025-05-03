@@ -5,6 +5,7 @@ import EmojiPicker from "emoji-picker-react";
 import axios from "axios";
 import { useAuth } from "../../context/AuthContext";
 import logo from '../../assets/media/logo.png'
+import API_URL from '../../config/api';
 
 const PostPage = ({ onClose }) => {
   const { user } = useAuth();
@@ -16,7 +17,7 @@ const PostPage = ({ onClose }) => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await axios.get(`http://localhost:3000/api/users/${user?.UserId}`); // update route as per your backend
+        const res = await axios.get(`${API_URL}/api/users/${user?.UserId}`); // update route as per your backend
         // console.log('API Response:', res.data);
         const { Name } = res.data.user;
         const { profilePicture } = res.data;
@@ -48,7 +49,7 @@ const PostPage = ({ onClose }) => {
     }
 
     try {
-      await axios.post("http://localhost:3000/api/post/post", formData, {
+      await axios.post(`${API_URL}/api/post/post`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
