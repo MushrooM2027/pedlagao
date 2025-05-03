@@ -6,7 +6,7 @@ const PlantationRequestApi = require('./Apis/PlantationRequestApi');
 const RequestFullfillmentApi = require('./Apis/requestFullfillmentApi');
 const Posts = require('./Apis/postApi');
 const Like = require('./Apis/likesApi');
-const Comment = require('./Apis/commentsApi')
+const Comment = require('./Apis/commentsApi');
 const cors = require('cors');
 const path = require('path');
 
@@ -31,7 +31,7 @@ app.get('/health', (req, res) => {
 });
 
 // API routes
-app.use(`api/users`, UserApi);
+app.use(`/api/users`, UserApi);
 app.use('/api/plant', PlantationRequestApi);
 app.use('/api/media', require('./Apis/mediaFileApi'));
 app.use('/api/request', RequestFullfillmentApi);
