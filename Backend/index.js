@@ -16,7 +16,7 @@ require('dotenv').config();
 // Improved CORS configuration
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? "https://pedlagao.vercel.app" 
+    ? "https://pedlagao.vercel.app"
     : "http://localhost:3000",
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
